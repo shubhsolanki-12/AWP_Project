@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Root Route Example</title>
+  <!-- Include AngularJS library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <!-- Include your AngularJS file -->
+  <script src="/client-side/app.js"></script>
+  <!-- Add some styles for a better presentation -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body ng-controller="MainController">
+  <!-- Container for the content -->
+  <div class="container">
+    <!-- Heading with a welcome message -->
+    <h1>Welcome to Our Web Application!</h1>
+    <!-- Display the server message -->
+    <h2>{{serverMessage}}</h2>
+    <!-- Some additional information about the web app -->
+    <p>This is a simple example of an AngularJS application consuming data from an Express server.</p>
+    <p>Feel free to explore the possibilities of this web app and modify it to suit your needs!</p>
+    <!-- Button to reload the data -->
+    <button ng-click="fetchData()">Reload Data</button>
+  </div>
+</body>
+</html>
